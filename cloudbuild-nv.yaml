@@ -4,15 +4,15 @@ steps:
   args:
   - kms
   - decrypt
-  - --ciphertext-file=key.json.enc
-  - --plaintext-file=key.json
+  - --ciphertext-file=hikma-health-nv-5b8f2f2d357f.json.enc
+  - --plaintext-file=hikma-health-nv-5b8f2f2d357f.json
   - --location=global
-  - --keyring=hikma-ring
-  - --key=hikma-app-key
+  - --keyring=hikma-health-nv-keyring
+  - --key=hikma-health-nv-key
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/hikma-health-backend-nv:$COMMIT_SHA',
           '--build-arg', 'app_env_arg=prod',
-          '--build-arg', 'credential_file_arg=key.json',
+          '--build-arg', 'credential_file_arg=hikma-health-nv-5b8f2f2d357f.json',
           '--build-arg', 'db_instance_arg=hikma-health-nv:us-east1:hikma-db',
           '--build-arg', 'commit_sha_arg=$COMMIT_SHA',
           '--build-arg', 'db_password_arg=${_DB_PASSWORD}',
