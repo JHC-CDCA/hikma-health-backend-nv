@@ -4,4 +4,4 @@ metadata:
   name: nv-api-certificate
 spec:
   domains:
-    - "nv-api.hikmahealth.org"
+    - "clinicanv.org"

@@ -3,14 +3,14 @@ kind: CronJob
 metadata:
   name: run-full-export
 spec:
-  schedule: "0 * * * *"
+  schedule: "0 0 * * 0"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
           - name: run-full-export
-            image: gcr.io/hikma-health/hikma-health-backend-nv:8c70ca30b8bde5ad47fb9bdcaea9f1ccd8ffb8c9
+            image: gcr.io/hikma-health-nv/hikma-health-backend-nv@sha256:ea173065c37ba315af9250d328f0798ac807abc72c7bcb75fa414d18e15db620
             command:
             - /bin/bash
             - run-export.sh
