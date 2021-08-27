@@ -24,7 +24,7 @@ if ENV == 'prod':
     PG_PASSWORD = os.environ['DB_PASSWORD']
     PG_HOST = '35.229.24.33'
     PG_DB = os.environ['DB_NAME']
-    PHOTOS_STORAGE_BUCKET = hikma-photos
-    EXPORTS_STORAGE_BUCKET = hikma-exports
+    PHOTOS_STORAGE_BUCKET = "hikma-photos"
+    EXPORTS_STORAGE_BUCKET = "hikma-exports"
     LOCAL_PHOTO_STORAGE_DIR = '/tmp/hikma_photos'
     DEFAULT_PROVIDER_ID_FOR_IMPORT = os.environ['DEFAULT_PROVIDER_ID']
