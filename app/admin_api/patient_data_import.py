@@ -183,6 +183,7 @@ COLUMNS = ['visit_date',
            'anxiety',
            'nuclear_family',
            'self_esteem',
+           'self_injury',
            'attention_deficit',
            'depression',
            'grief',
@@ -693,6 +694,7 @@ class PatientDataRow:
     anxiety: str = None
     nuclear_family: str = None
     self_esteem: str = None
+    self_injury: str = None
     attention_deficit: str = None
     depression: str = None
     grief: str = None

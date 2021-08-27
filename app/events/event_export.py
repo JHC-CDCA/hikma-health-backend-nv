@@ -19,7 +19,7 @@ def get_text_field_positive(data, field, text_field):
         return None
     if data.get(field) is not None and not data.get(text_field):
         return 'Positivo' if data.get(field) else 'Negativo'
-    return data.get(text_field) if data.get(field) else 'Negativo' 
+    return data.get(text_field) if data.get(field) else 'Negativo'
 
 def get_feeding_center(data):
     if data.get('feedingCenter') == 'Other':
@@ -198,6 +198,7 @@ def write_psych_pathologies_event(row:PatientDataRow, event):
     row.anxiety = get_text_field(data, 'anxiety', 'anxietyText')
     row.nuclear_family = get_text_field(data, 'nuclearFamily', 'nuclearFamilyText')
     row.self_esteem = get_text_field(data, 'selfEsteem', 'selfEsteemText')
+    row.self_injury = get_text_field(data, 'selfInjury', 'selfInjuryText')
     row.attention_deficit = get_text_field(data, 'attentionDeficit', 'attentionDeficitText')
     row.depression = get_text_field(data, 'depression', 'depressionText')
     row.grief = get_text_field(data, 'grief', 'griefText')

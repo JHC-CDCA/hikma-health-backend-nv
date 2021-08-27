@@ -9,7 +9,7 @@ import uuid
 def user_data_by_email(email):
     with get_connection() as conn:
         with conn.cursor() as cur:
-            cur.execute('SELECT id, name, role, email, hashed_password FROM users WHERE email = %s',
+            cur.execute('SELECT id, name, role, email, hashed_password FROM users WHERE LOWER(email) = LOWER(%s)',
                         [email])
             row = cur.fetchone()
             if not row:

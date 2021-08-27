@@ -13,7 +13,7 @@ steps:
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/hikma-health-backend-nv:$COMMIT_SHA',
           '--build-arg', 'app_env_arg=prod',
           '--build-arg', 'credential_file_arg=hikma-health-nv-5b8f2f2d357f.json',
-          '--build-arg', 'db_instance_arg=hikma-health-nv:us-east1:hikma-db',
+          '--build-arg', 'db_instance_arg=${_DB_INSTANCE}',
           '--build-arg', 'commit_sha_arg=$COMMIT_SHA',
           '--build-arg', 'db_password_arg=${_DB_PASSWORD}',
           '--build-arg', 'db_name_arg=${_DB_NAME}',
