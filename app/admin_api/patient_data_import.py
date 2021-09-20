@@ -25,6 +25,7 @@ COLUMNS = ['visit_date',
            'first_name',
            'surname',
            'age',
+           'date_of_birth',
            'gender',
            'home_country',
            'phone',
@@ -140,6 +141,7 @@ COLUMNS = ['visit_date',
            'copd',
            'gastritis',
            'scabies',
+           'distress',
            'last_PAP',
            'vaginal_fluid',
            'hypertension',
@@ -385,9 +387,11 @@ COLUMNS = ['visit_date',
            'benign_nodules',
            'malignant_nodules',
            'thyroid_nodules',
+           'thyroiditis',
            'normal_ultrasound',
            'polycystic_ovaries',
            'simple_ovarian_cysts',
+           'other_result',
            # Family Planning
            'doctor_fp',
            'age_sexual_relations',
@@ -399,10 +403,17 @@ COLUMNS = ['visit_date',
            'vasectomy_sterilization',
            'std_type',
            'injection',
+           'injection_repeat',
            'iud_BC',
+           'iud_BC_repeat',
            'implant_BC',
+           'implant_BC_repeat',
+           'monthly_BC',
+           'monthly_BC_repeat',
            'pills_BC',
+           'pills_BC_repeat',
            'condoms',
+           'condoms_repeat',
            'sex_orientation',
            'married',
            'permanent_partner',
@@ -536,6 +547,7 @@ class PatientDataRow:
     first_name: str = None
     surname: str = None
     age: str = None
+    date_of_birth: datetime = None
     gender: str = None
     home_country: str = None
     phone: str = None
@@ -896,9 +908,11 @@ class PatientDataRow:
     benign_nodules: str = None
     malignant_nodules: str = None
     thyroid_nodules: str = None
+    thyroiditis: str = None
     normal_ultrasound: str = None
     polycystic_ovaries: str = None
     simple_ovarian_cysts: str = None
+    other_result: str = None
     # Family Planning
     doctor_fp: str = None
     age_sexual_relations: float = None
@@ -910,10 +924,17 @@ class PatientDataRow:
     vasectomy_sterilization: bool = None
     std_type: bool = None
     injection: bool = None
+    injection_repeat: bool = None
     iud_BC: bool = None
+    iud_BC_repeat: bool = None
     implant_BC: bool = None
+    implant_BC_repeat: bool = None
+    monthly_BC: bool = None
+    monthly_BC_repeat: bool = None
     pills_BC: bool = None
+    pills_BC_repeat: bool = None
     condoms: bool = None
+    condoms_repeat: bool = None
     sex_orientation: bool = None
     married: bool = None
     permanent_partner: bool = None
