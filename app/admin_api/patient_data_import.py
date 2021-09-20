@@ -663,6 +663,7 @@ class PatientDataRow:
     copd: str = None
     gastritis: str = None
     scabies: str = None
+    distress: str = None
     last_PAP: str = None
     vaginal_fluid: str = None
     hypertension: str = None
