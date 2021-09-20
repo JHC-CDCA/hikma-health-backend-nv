@@ -153,6 +153,7 @@ def write_med_pathologies_event(row: PatientDataRow, event):
     row.copd = get_text_field(data, 'copd', 'copdText') 
     row.gastritis = get_text_field(data, 'gastritis', 'gastritisText') 
     row.scabies = get_text_field(data, 'scabies', 'scabiesText') 
+    row.distress = get_text_field(data, 'distress', 'distressText')
     row.last_PAP = data.get('lastPAP') 
     row.vaginal_fluid = get_text_field(data, 'vaginalFluid', 'vaginalFluidText') 
     row.hypertension = get_text_field(data, 'hypertension', 'hypertensionText') 
