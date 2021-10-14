@@ -8,7 +8,7 @@ from events.event_export import (write_vitals_event, write_medical_hx_event, wri
                                  write_lab_orders_event, write_lab_tests_event, write_urine_tests_event, write_pap_event, write_ultrasound_event, write_family_planning_event,
                                  write_dental_origin_event, write_dental_treatment_event, write_program_trainings_event, write_xray_orders_event, write_xray_results_event,
                                  write_optometry_event, write_accident_report_event)
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from tempfile import NamedTemporaryFile
 import json
 from google.cloud import storage
@@ -58,6 +58,7 @@ class PatientDataExporter:
                 first_name=patient.given_name.get('en'),
                 surname=patient.surname.get('en'),
                 age=self.age_string_from_dob(patient.date_of_birth),
+                date_of_birth=patient.date_of_birth
                 gender=patient.sex,
                 home_country=patient.country.get('en'),
                 phone=patient.phone
