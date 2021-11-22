@@ -1067,6 +1067,7 @@ class PatientDataRow:
     follow_up_visit: datetime = None
     other_ar: str = None
     # Nursing care
+    doctor_nc: str = None
     wound_care: str = None
     iv: str = None
     injections: str = None
