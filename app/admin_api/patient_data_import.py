@@ -537,7 +537,13 @@ COLUMNS = ['visit_date',
            'trauma_details',
            'referral_specialist',
            'follow_up_visit',
-           'other_ar'
+           'other_ar',
+           # Nursing Care
+           'doctor_nc',
+           'wound_care',
+           'iv',
+           'injections',
+           'nebulization'
            ]
 
 
@@ -547,7 +553,7 @@ class PatientDataRow:
     first_name: str = None
     surname: str = None
     age: str = None
-    date_of_birth: datetime = None
+    date_of_birth: date = None
     gender: str = None
     home_country: str = None
     phone: str = None
@@ -1060,6 +1066,11 @@ class PatientDataRow:
     referral_specialist: bool = None
     follow_up_visit: datetime = None
     other_ar: str = None
+    # Nursing care
+    wound_care: str = None
+    iv: str = None
+    injections: str = None
+    nebulization: str = None
 
 
 # COLUMN_TYPES = [str, None, str, str, str, str, str, str, str, str, str, str, str, str, str, str, str, str, float, str,

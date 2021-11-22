@@ -580,3 +580,11 @@ def write_accident_report_event(row:PatientDataRow, event):
     row.referral_specialist = get_text_field(data, 'referralSpecialist', 'referralSpecialistText')
     row.follow_up_visit = get_text_field(data, 'followUpVisit', 'followUpVisitText')
     row.other_ar = data.get('other')
+
+def write_nursing_care_event(row: PatientDataRow, event):
+    data = json.loads(event.event_metadata)
+    row.doctor_nc = data.get('doctor')
+    row.wound_care = get_text_field(data, 'woundCare', 'woundCareDate')
+    row.iv = get_text_field(data, 'IV', 'IVDate')
+    row.injections = get_text_field(data, 'injections', 'injectionsDate')
+    row.nebulization = get_text_field(data, 'nebulization', 'nebulizationDate')

@@ -7,7 +7,7 @@ from events.event_export import (write_vitals_event, write_medical_hx_event, wri
                                  write_med_stock_event, write_med_otc_event, write_controlled_med_event, write_med_pathologies_event, write_psych_pathologies_event, write_household_event,
                                  write_lab_orders_event, write_lab_tests_event, write_urine_tests_event, write_pap_event, write_ultrasound_event, write_family_planning_event,
                                  write_dental_origin_event, write_dental_treatment_event, write_program_trainings_event, write_xray_orders_event, write_xray_results_event,
-                                 write_optometry_event, write_accident_report_event)
+                                 write_optometry_event, write_accident_report_event, write_nursing_care_event)
 from datetime import datetime, timedelta
 from tempfile import NamedTemporaryFile
 import json
@@ -52,6 +52,7 @@ class SinglePatientDataExporter:
                 first_name=patient.given_name.get('en'),
                 surname=patient.surname.get('en'),
                 age=self.age_string_from_dob(patient.date_of_birth),
+                date_of_birth=patient.date_of_birth.strftime("%Y-%m-%d"),
                 gender=patient.sex,
                 home_country=patient.country.get('en'),
                 phone=patient.phone
@@ -108,6 +109,8 @@ class SinglePatientDataExporter:
                     write_optometry_event(row, event)
                 elif event.event_type == 'Accident Report':
                     write_accident_report_event(row, event)
+                elif event.event_type == 'Nursing Care':
+                    write_nursing_care_event(row, event)
             yield row
 
     def write_text_event(self, row, key, text):
