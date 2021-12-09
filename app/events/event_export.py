@@ -237,6 +237,7 @@ def write_lab_orders_event(row:PatientDataRow, event):
     row.doctor_lo = data.get('doctor')
     row.hematic_biometry = get_field(data, 'hematicBiometry')
     row.urinalysis = get_field(data, 'urinalysis')
+    row.peripherical_exam = get_field(data, 'periphericalExam')
     row.biochemistry = get_field(data, 'biochemistry')
     row.lipid_profile = get_field(data, 'lipidProfile')
     row.pregnancy_test = get_field(data, 'pregnancyTest')

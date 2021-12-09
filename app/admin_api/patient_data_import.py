@@ -219,6 +219,7 @@ COLUMNS = ['visit_date',
            'doctor_lo',
            'hematic_biometry',
            'urinalysis',
+           'peripherical_exam',
            'biochemistry',
            'lipid_profile',
            'pregnancy_test',
@@ -747,6 +748,7 @@ class PatientDataRow:
     doctor_lo: bool = None
     hematic_biometry: bool = None
     urinalysis: bool = None
+    peripherical_exam: bool = None
     biochemistry: bool = None
     lipid_profile: bool = None
     pregnancy_test: bool = None
