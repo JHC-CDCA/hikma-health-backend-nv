@@ -233,46 +233,46 @@ COLUMNS = ['visit_date',
            'other_lo',
            # Lab tests
            'doctor_lt',
-           'CBC_Immature',
-           'CBCMCHC',
-           'CBCMCH',
-           'CBC_basophils',
-           'CBC_eosinophils',
-           'CBC_hematocrit',
-           'CBC_hemoglobin',
-           'CBC_lymphocytes',
-           'CBC_monocytes',
-           'CBC_platelets',
-           'CBC_segmented',
            'CBCWBC',
-           'CBC_platelet_count',
            'CBCRBC',
+           'CBC_hemoglobin',
+           'CBC_hematocrit',
+           'CBC_platelets',
            'CBCMCV',
+           'CBCMCH',
+           'CBCMCHC',
+           'CBC_segmented',
+           'CBC_eosinophils',
+           'CBC_basophils',
+           'CBC_monocytes',
+           'CBC_lymphocytes',
+#       'CBC_Immature',
+#       'CBC_platelet_count',           
            'biochem_uric',
            'biochem_creatinine',
            'biochem_glucose',
            'lipid_cholesterol',
-           'lipid_HDL',
-           'lipid_LDL',
            'lipid_triglycerides',
-           'lipid_VLDL',
-           'fecal_antigens',
-           'fecal_mononuclear',
-           'fecal_polymophonuclear',
-           'fecal_bacteria',
-           'fecal_erythrocytes',
-           'fecal_leukocytes',
-           'fecal_others',
-           'fecal_cysts',
-           'fecal_trophozoites',
+           'lipid_HDL',
+           'lipid_VLDL',           
+           'lipid_LDL',
+           'fecal_color',
+           'fecal_consistency',
+           'fecal_observations',
            'fecal_PH',
            'fecal_reducers',
            'fecal_occult',
-           'fecal_color',
-           'fecal_observations',
-           'fecal_consistency',
+           'fecal_cysts',
+           'fecal_trophozoites',
+           'fecal_others',
+           'fecal_leukocytes',
+           'fecal_erythrocytes',
+           'fecal_bacteria',
+           'fecal_polymophonuclear',
+           'fecal_mononuclear',
            'pregnancy_hemogravindex',
            'pregnancy_gravindex',
+           'fecal_antigens',
            'microbiology_pilori',
            'microbiology_malaria',
            'serology_strep',
@@ -762,46 +762,46 @@ class PatientDataRow:
     other_lo: str = None
     # Lab tests
     doctor_lt: str = None
-    CBC_Immature: bool = None
-    CBCMCHC: bool = None
-    CBCMCH: bool = None
-    CBC_basophils: bool = None
-    CBC_eosinophils: bool = None
-    CBC_hematocrit: bool = None
-    CBC_hemoglobin: bool = None
-    CBC_lymphocytes: bool = None
-    CBC_monocytes: bool = None
-    CBC_platelets: bool = None
-    CBC_segmented: bool = None
     CBCWBC: bool = None
-    CBC_platelet_count: bool = None
     CBCRBC: bool = None
+    CBC_hemoglobin: bool = None
+    CBC_hematocrit: bool = None
+    CBC_platelets: bool = None
     CBCMCV: bool = None
+    CBCMCH: bool = None
+    CBCMCHC: bool = None
+    CBC_segmented: bool = None
+    CBC_eosinophils: bool = None
+    CBC_basophils: bool = None
+    CBC_monocytes: bool = None
+    CBC_lymphocytes: bool = None
+    #CBC_Immature: bool = None
+    #CBC_platelet_count: bool = None
     biochem_uric: bool = None
     biochem_creatinine: bool = None
     biochem_glucose: bool = None
     lipid_cholesterol: bool = None
-    lipid_HDL: bool = None
-    lipid_LDL: bool = None
     lipid_triglycerides: bool = None
+    lipid_HDL: bool = None
     lipid_VLDL: bool = None
-    fecal_antigens: bool = None
-    fecal_mononuclear: bool = None
-    fecal_polymophonuclear: bool = None
-    fecal_bacteria: bool = None
-    fecal_erythrocytes: bool = None
-    fecal_leukocytes: bool = None
-    fecal_others: bool = None
-    fecal_cysts: bool = None
-    fecal_trophozoites: bool = None
+    lipid_LDL: bool = None
+    fecal_color: bool = None
+    fecal_consistency: bool = None
+    fecal_observations: bool = None
     fecal_PH: bool = None
     fecal_reducers: bool = None
     fecal_occult: bool = None
-    fecal_color: bool = None
-    fecal_observations: bool = None
-    fecal_consistency: bool = None
+    fecal_cysts: bool = None
+    fecal_trophozoites: bool = None
+    fecal_others: bool = None
+    fecal_leukocytes: bool = None
+    fecal_erythrocytes: bool = None
+    fecal_bacteria: bool = None
+    fecal_polymophonuclear: bool = None
+    fecal_mononuclear: bool = None
     pregnancy_hemogravindex: bool = None
     pregnancy_gravindex: bool = None
+    fecal_antigens: bool = None
     microbiology_pilori: bool = None
     microbiology_malaria: bool = None
     serology_strep: bool = None
